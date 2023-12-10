@@ -1,21 +1,92 @@
-script_key = getgenv().hvh_key;
-([[
-                   This script has been licensed using Luarmor
-                Luarmor v3.5, Lua whitelisting system by @fedaral#0
-                           https://luarmor.net/
+-- hvh.lua
 
-      _          _     _             
-     | |____   _| |__ | |_   _  __ _ 
-     | '_ \ \ / / '_ \| | | | |/ _` |
-     | | | \ V /| | | | | |_| | (_| |
-     |_| |_|\_/ |_| |_|_|\__,_|\__,_|
-                                     
 
-                                                     
-                 Script ID: a487b2ea30ec6c8575ba71bb5e5c2544
+if _G.hvhLoaded then 
+    return
+else
+    _G.hvhLoaded = true
+end
 
-            Please use the api.luarmor.net loadstring to load this script. (for your safety)
-          You can use https://luarmor.net/check to see if this script is verified & safe to run.
-]])
+if not isfolder("hvh") then 
+    makefolder("hvh")
+end
 
-{(function(b)local c=debug.getmetatable(b)debug.setmetatable(b,{__call=function(d,e)debug.setmetatable(b,c)return function(b)b{'a487b2ea30ec6c8575ba71bb5e5c2544',d}end end})end)''}(function(b)local b=b[1]local c=''local d=24915;local e=0;local f={}while e<966 do e=e+1;while e<605 and d%5260<2630 do e=e+1;d=(d-466)%41090;local b=e+d;if(d%3504)>1752 then d=(d-706)%30483;while e<313 and d%7102<3551 do e=e+1;d=(d*411)%43087;local b=e+d;if(d%14970)>7485 then d=(d*355)%41240;local b=76830;if not f[b]then f[b]=1;c=c..'.n'end elseif d%2~=0 then d=(d*316)%34377;local b=51374;if not f[b]then f[b]=1;c=c..'luarmor'end else d=(d*939)%2412;e=e+1;local b=67052;if not f[b]then f[b]=1 end end end elseif d%2~=0 then d=(d+986)%9320;while e<597 and d%3566<1783 do e=e+1;d=(d-950)%7147;local b=e+d;if(d%4020)<2010 then d=(d+826)%6247;local b=79206;if not f[b]then f[b]=1;c=c..'ht'end elseif d%2~=0 then d=(d+737)%14175;local b=51471;if not f[b]then f[b]=1;c=c..'tp'end else d=(d*705)%44808;e=e+1;local b=58695;if not f[b]then f[b]=1;c=c..'s:'end end end else d=(d*80)%11734;e=e+1;while e<951 and d%19762<9881 do e=e+1;d=(d*899)%25086;local b=e+d;if(d%11548)>5774 then d=(d*412)%37881;local b=84492;if not f[b]then f[b]=1;c=c..'//'end elseif d%2~=0 then d=(d-419)%22808;local b=94003;if not f[b]then f[b]=1;c=c..'ap'end else d=(d-851)%30011;e=e+1;local b=21386;if not f[b]then f[b]=1;c=c..'i.'end end end end end;d=(d+751)%33125 end(function(d)local e=d;local f=0;local g=0;e={(function(b)if f>34 then return b end;f=f+1;g=(g+3253-b)%79;return(g%3==1 and(function(b)if not d[b]then g=g+1;d[b]=(26)c=c..'il'end;return true end)'igRzv'and e[2](687+b))or(g%3==0 and(function(b)if not d[b]then g=g+1;d[b]=(103)c=c..'.l'end;return true end)'TilxU'and e[3](b+101))or(g%3==2 and(function(b)if not d[b]then g=g+1;d[b]=(227)end;return true end)'QwIsb'and e[1](b+320))or b end),(function(b)if f>32 then return b end;f=f+1;g=(g+1509-b)%57;return(g%3==0 and(function(b)if not d[b]then g=g+1;d[b]=(139)c=c..'et'end;return true end)'aOitw'and e[3](909+b))or(g%3==1 and(function(b)if not d[b]then g=g+1;d[b]=(65)end;return true end)'ObBbT'and e[1](b+129))or(g%3==2 and(function(b)if not d[b]then g=g+1;d[b]=(153)c=c..'ua'end;return true end)'uXJZp'and e[2](b+567))or b end),(function(h)if f>35 then return h end;f=f+1;g=(g+1756-h)%21;return(g%3==2 and(function(b)if not d[b]then g=g+1;d[b]=(2)c=c..'/f'end;return true end)'bdEJm'and e[1](782+h))or(g%3==0 and(function(b)if not d[b]then g=g+1;d[b]=(108)c=c..'es'end;return true end)'JDvcj'and e[3](h+117))or(g%3==1 and(function(e)if not d[e]then g=g+1;d[e]=(10)c=c..'/v3/l/'..b end;return true end)'tIFsS'and e[2](h+748))or h end)}e[2](8832)end){}loadstring(game:HttpGet(c)){}end)
+if not isfile("hvh/key.txt") then
+    writefile("hvh/key.txt","")
+end
+
+
+local hvhlua_loader = Instance.new("ScreenGui")
+local Holder = Instance.new("Frame")
+local Title = Instance.new("TextLabel")
+local KeyboxBack = Instance.new("Frame")
+local KeyBox = Instance.new("TextBox")
+local Button = Instance.new("TextButton")
+
+hvhlua_loader.Name = "hvh.lua_loader"
+hvhlua_loader.Parent = game.CoreGui
+hvhlua_loader.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+Holder.Name = "Holder"
+Holder.Parent = hvhlua_loader
+Holder.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+Holder.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Holder.BorderSizePixel = 0
+Holder.Position = UDim2.new(0.37500006, 0, 0.456757218, 0)
+Holder.Size = UDim2.new(0.248437494, 0, 0.139560789, 0)
+
+Title.Name = "Title"
+Title.Parent = Holder
+Title.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Title.BackgroundTransparency = 1.000
+Title.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Title.BorderSizePixel = 0
+Title.Size = UDim2.new(1, 0, 0.298970908, 0)
+Title.Font = Enum.Font.Unknown
+Title.Text = "hvh.lua login"
+Title.TextColor3 = Color3.fromRGB(255, 255, 255)
+Title.TextSize = 18.000
+
+KeyboxBack.Name = "KeyboxBack"
+KeyboxBack.Parent = Holder
+KeyboxBack.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
+KeyboxBack.BorderColor3 = Color3.fromRGB(0, 0, 0)
+KeyboxBack.BorderSizePixel = 0
+KeyboxBack.Position = UDim2.new(0.034591388, 0, 0.291545302, 0)
+KeyboxBack.Size = UDim2.new(0.933962286, 0, 0.209279642, 0)
+
+KeyBox.Name = "KeyBox"
+KeyBox.Parent = KeyboxBack
+KeyBox.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+KeyBox.BackgroundTransparency = 1.000
+KeyBox.BorderColor3 = Color3.fromRGB(0, 0, 0)
+KeyBox.BorderSizePixel = 0
+KeyBox.Position = UDim2.new(0.0235690232, 0, 0, 0)
+KeyBox.Size = UDim2.new(0.976430953, 0, 1, 0)
+KeyBox.Font = Enum.Font.Ubuntu
+KeyBox.PlaceholderText = "Enter your key here..."
+KeyBox.Text = readfile("hvh/key.txt")
+KeyBox.TextColor3 = Color3.fromRGB(255, 255, 255)
+KeyBox.TextSize = 14.000
+KeyBox.TextXAlignment = Enum.TextXAlignment.Left
+
+Button.Name = "Button"
+Button.Parent = Holder
+Button.Active = false
+Button.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
+Button.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Button.BorderSizePixel = 0
+Button.Position = UDim2.new(0.351067126, 0, 0.647561371, 0)
+Button.Selectable = false
+Button.Size = UDim2.new(0.298742145, 0, 0.209279642, 0)
+Button.Font = Enum.Font.Ubuntu
+Button.Text = "Login"
+Button.TextColor3 = Color3.fromRGB(255, 255, 255)
+Button.TextSize = 14.000
+
+Button.MouseButton1Click:Connect(function()
+    local key = tostring(KeyBox.Text)
+    writefile("hvh/key.txt",key)
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/laagginq/hvh/main/src.lua"))()
+    hvhlua_loader:Destroy()
+end)
