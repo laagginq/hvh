@@ -87,6 +87,7 @@ Button.TextSize = 14.000
 Button.MouseButton1Click:Connect(function()
     local key = tostring(KeyBox.Text)
     writefile("hvh/key.txt",key)
+    script_key = key;
     loadstring(game:HttpGet("https://raw.githubusercontent.com/laagginq/hvh/main/src.lua"))()
     hvhlua_loader:Destroy()
 end)
