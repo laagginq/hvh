@@ -85,9 +85,9 @@ Button.TextColor3 = Color3.fromRGB(255, 255, 255)
 Button.TextSize = 14.000
 
 Button.MouseButton1Click:Connect(function()
+    hvhlua_loader:Destroy()
     local key = tostring(KeyBox.Text)
     writefile("hvh/key.txt",key)
     script_key = key;
     loadstring(game:HttpGet("https://raw.githubusercontent.com/laagginq/hvh/main/src.lua"))()
-    hvhlua_loader:Destroy()
 end)
