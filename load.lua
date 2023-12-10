@@ -1,3 +1,4 @@
+script_key = getgenv().hvh_key;
 ([[
                    This script has been licensed using Luarmor
                 Luarmor v3.5, Lua whitelisting system by @fedaral#0
