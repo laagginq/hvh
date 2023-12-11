@@ -25,9 +25,9 @@ local library = {
     hovers = {},
     Relations = {},
     folders = {
-        main = "zepter",
-        assets = "zepter/images",
-        configs = "zepter/configs"
+        main = "hvh",
+        assets = "hvh/images",
+        configs = "hvh/configs"
     },
     shared = {
         initialized = false,
