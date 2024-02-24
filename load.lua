@@ -1,5 +1,3 @@
--- hvh.lua
-
 if _G.hvhLoaded then 
 	return
 else
@@ -32,6 +30,8 @@ Holder.BackgroundColor3 = Color3.fromRGB(10, 10, 10)
 Holder.BorderColor3 = Color3.fromRGB(111, 50, 168)
 Holder.Position = UDim2.new(0.344531238, 0, 0.346367627, 0)
 Holder.Size = UDim2.new(0, 366, 0, 118)
+Holder.Active = true
+Holder.Draggable = true
 
 Title.Name = "Title"
 Title.Parent = Holder
